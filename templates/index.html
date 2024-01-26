@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+</head>
+
+<body>
+    <h1>Fake News Detection</h1>
+    <form method="POST" action="/detect">
+        <textarea name="text" rows="4" cols="50" placeholder="Nhập đoạn văn bản cần kiểm tra...">{{ text }}</textarea><br>
+        <button type="submit">Kiểm tra</button>
+    </form>
+    <br>
+    {% if result %}
+    <h2>Kết quả:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+    <p> <a href='http://localhost:3000/homedetec'> Back to home</a></p>
+</body>
+
+
+</html>
